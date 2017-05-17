@@ -12,6 +12,14 @@ namespace Blog
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            System.Console.WriteLine("0000000000000000000000000000000000000000000000");
+            System.Console.WriteLine("0000000000000000000000000000000000000000000000");
+            System.Console.WriteLine("0000000000000000000000000000000000000000000000");
+            System.Console.WriteLine("0000000000000000000000000000000000000000000000");
+            System.Console.WriteLine("0000000000000000000000000000000000000000000000");
+            System.Console.WriteLine("0000000000000000000000000000000000000000000000");
+
+
 
             routes.MapRoute(
                 name: "Default",
