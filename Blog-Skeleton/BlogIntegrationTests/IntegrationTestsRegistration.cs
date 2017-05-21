@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace BlogIntegrationTests
 {
     [TestFixture]
-    public class IntegrationTests
+    public class IntegrationTestsRegistration
     {
         private IWebDriver driver = BrowserHost.Instance.Application.Browser;
 
@@ -33,11 +33,11 @@ namespace BlogIntegrationTests
             this.driver.Quit();
         }
 
-        [Test, Property("Integration", 1)]
+        [Test, Property("Integration.Registration", 1)]
         public void WithoutEmailRegistration()
         {
             RegistrationPage regPage = new RegistrationPage(this.driver);
-            var user = AccessExcelData.GetTestData("RegisterWithoutEmail");
+            var user = AccessExcelData.GetTestDataRegistration("RegisterWithoutEmail");
 
             regPage.NavigateTo();
             regPage.FillRegistrationForm(user);
@@ -45,11 +45,11 @@ namespace BlogIntegrationTests
             regPage.AssertErrorMessage("The Email field is required.");
         }
 
-        [Test, Property("Integration", 1)]
+        [Test, Property("Integration.Registration", 1)]
         public void WithInvalidEmailRegistration()
         {
             RegistrationPage regPage = new RegistrationPage(this.driver);
-            var user = AccessExcelData.GetTestData("RegisterWithInvalidEmail");
+            var user = AccessExcelData.GetTestDataRegistration("RegisterWithInvalidEmail");
 
             regPage.NavigateTo();
             regPage.FillRegistrationForm(user);
@@ -57,11 +57,11 @@ namespace BlogIntegrationTests
             regPage.AssertErrorMessage("The Email field is not a valid e-mail address.");
         }
 
-        [Test, Property("Integration", 1)]
+        [Test, Property("Integration.Registration", 1)]
         public void WithMissingFullNameRegistration()
         {
             RegistrationPage regPage = new RegistrationPage(this.driver);
-            var user = AccessExcelData.GetTestData("RegisterWithoutFullName");
+            var user = AccessExcelData.GetTestDataRegistration("RegisterWithoutFullName");
 
             regPage.NavigateTo();
             regPage.FillRegistrationForm(user);
@@ -69,11 +69,11 @@ namespace BlogIntegrationTests
             regPage.AssertErrorMessage("The Full Name field is required.");
         }
 
-        [Test, Property("Integration", 1)]
+        [Test, Property("Integration.Registration", 1)]
         public void WithoutPasswordRegistration()
         {
             RegistrationPage regPage = new RegistrationPage(this.driver);
-            RegistrationUser user = AccessExcelData.GetTestData("RegisterWithoutPassword");
+            RegistrationUser user = AccessExcelData.GetTestDataRegistration("RegisterWithoutPassword");
 
             regPage.NavigateTo();
             regPage.FillRegistrationForm(user);
@@ -81,11 +81,11 @@ namespace BlogIntegrationTests
             regPage.AssertErrorMessage("The Password field is required.");
         }
 
-        [Test, Property("Integration", 1)]
+        [Test, Property("Integration.Registration", 1)]
         public void WithPasswordMismatchRegistration()
         {
             RegistrationPage regPage = new RegistrationPage(this.driver);
-            RegistrationUser user = AccessExcelData.GetTestData("RegisterWithPasswordMismatch");
+            RegistrationUser user = AccessExcelData.GetTestDataRegistration("RegisterWithPasswordMismatch");
 
             regPage.NavigateTo();
             regPage.FillRegistrationForm(user);
