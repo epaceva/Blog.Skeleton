@@ -10,11 +10,11 @@ namespace BlogNUnittest
     [TestFixture]
     public class UnitTests
     {
-        [Test]
-        public void TestMethod()
-        {
-            // TODO: Add your test code here
-            Assert.Pass("Your first passing test");
-        }
+        //[Test]
+        //public void TestMethod()
+        //{
+        //    // TODO: Add your test code here
+        //    Assert.Pass("Your first passing test");
+        //}
     }
 }

@@ -13,14 +13,38 @@ namespace Blog.UI.Tests
     [TestFixture]
     public class UITests
     {
-        [Test]
-        public void CheckSiteLoad()
-        {
-            IWebDriver driver = BrowserHost.Instance.Application.Browser;
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
+        //[Test, Property("UI", 1)]
+        //[Author("epaceva")]
 
-            var logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
-            Assert.AreEqual("SOFTUNI BLOG", logo.Text);
-        }
+        //public void CheckSiteLoad()
+        //{
+        //    IWebDriver driver = BrowserHost.Instance.Application.Browser;
+        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
+
+        //    var logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
+        //    Assert.AreEqual("SOFTUNI BLOG", logo.Text);
+        //}
+
+        //[Test, Property("Integration", 1)]
+        //[Author("epaceva")]
+        //public void CheckSiteLoad()
+        //{
+        //    IWebDriver driver = BrowserHost.Instance.Application.Browser;
+        //    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
+
+        //    var logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
+        //    Assert.AreEqual("SOFTUNI BLOG", logo.Text);
+        //}
+
+        //[Test, Property("Integration", 1)]
+        //[Author("epaceva")]
+        //public void NavigateToRegistrationPage()
+        //{
+        //    HomePage homePage = new HomePage(this.driver);
+
+        //    homePage.NavigateTo();
+
+        //    Assert.AreEqual("SOFTUNI BLOG", homePage.heading.Text);
+        //}
     }
 }
