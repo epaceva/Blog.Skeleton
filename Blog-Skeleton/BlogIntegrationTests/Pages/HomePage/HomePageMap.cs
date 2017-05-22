@@ -11,6 +11,5 @@ namespace BlogIntegrationTests.Pages.HomePage
     {
         public IWebElement heading => Driver.FindElement(By.ClassName("navbar-brand"));
         public IWebElement registrationButton => Driver.FindElement(By.Id("registerLink"));
-        public IWebElement loginButton => Driver.FindElement(By.Id("loginLink"));
     }
 }

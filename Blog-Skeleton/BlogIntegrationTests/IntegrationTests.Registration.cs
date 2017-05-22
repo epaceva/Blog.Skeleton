@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace BlogIntegrationTests
 {
     [TestFixture]
-    public class IntegrationTestsRegistration
+    public class IntegrationTests
     {
         private IWebDriver driver = BrowserHost.Instance.Application.Browser;
 
