@@ -12,7 +12,7 @@ namespace BlogIntegrationTests.Models
     public class AccessExcelData
     {
         public static string TestDataFileConnectionRegistration()
-        {
+        { 
             var path = ConfigurationManager.AppSettings["TestDataSheetPath"];
             var filename = "RegistrationUserData.xlsx";
             var con = string.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;
