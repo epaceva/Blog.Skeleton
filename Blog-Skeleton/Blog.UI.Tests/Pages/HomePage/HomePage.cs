@@ -16,6 +16,14 @@ namespace Blog.UI.Tests.Pages.HomePage
         {
         }
 
+        public string URL
+        {
+            get
+            {
+                return base.url;
+            }
+        }
+
         public void NavigateTo()
         {
             this.Driver.Navigate().GoToUrl(this.url);

@@ -34,5 +34,10 @@ namespace Blog.UI.Tests.Pages
                 return this.wait;
             }
         }
+
+        public void NavigateTo(string url)
+        {
+            this.Driver.Navigate().GoToUrl(url);
+        }
     }
 }

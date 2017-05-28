@@ -11,5 +11,10 @@ namespace Blog.UI.Tests.Pages.HomePage
     {
         public IWebElement heading => Driver.FindElement(By.ClassName("navbar-brand"));
         public IWebElement registrationButton => Driver.FindElement(By.Id("registerLink"));
+
+        public IWebElement LogoffLink => Driver.FindElement(By.XPath("//a[contains(text(),'Log off')]"));
+        public IWebElement LoginLink => Driver.FindElement(By.Id("loginLink"));
+
+        public IWebElement CreatePostLink => Driver.FindElement(By.XPath("//a[contains(text(),'Create')]"));
     }
 }

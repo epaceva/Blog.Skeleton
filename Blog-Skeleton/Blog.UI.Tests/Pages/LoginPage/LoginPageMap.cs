@@ -29,7 +29,6 @@ namespace Blog.UI.Tests.Pages.LoginPage
             get
             {
                 // /html/body/div[2]/div/div/form/div[1]/div/span/span
-                // /html/body/div[2]/div/div/form/div[1]/div/span/span
                 this.Wait.Until(ExpectedConditions.ElementExists(By.XPath("/html/body/div[2]/div/div/form/div[1]/div/span/span")));
                 return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[1]/div/span/span"));
             }

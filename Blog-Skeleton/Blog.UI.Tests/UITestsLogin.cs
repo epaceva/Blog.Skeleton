@@ -30,65 +30,65 @@ namespace Blog.UI.Tests
         {
             this.driver.Quit();
         }
-        //
+        
         [Test, Property("UI.Tests.Login", 1)]
         public void SuccessfulLogin()
         {
-            LoginPage regPage = new LoginPage(this.driver);
+            LoginPage logPage = new LoginPage(this.driver);
             var user = AccessExcelData.GetTestDataLoging("LoginSuccessfully");
 
-            regPage.NavigateTo();
-            regPage.FillLoginForm(user);
+            logPage.NavigateTo();
+            logPage.FillLoginForm(user);
 
-            regPage.AssertSuccessfulLogin("Hello evitta15@mail.bg!");
+            logPage.AssertSuccessfulLogin("Hello evitta15@mail.bg!");
         }
 
         [Test, Property("UI.Tests.Login", 1)]
         public void WithoutEmailLogin()
         {
-            LoginPage regPage = new LoginPage(this.driver);
+            LoginPage logPage = new LoginPage(this.driver);
             var user = AccessExcelData.GetTestDataLoging("LoginWithoutEmail");
 
-            regPage.NavigateTo();
-            regPage.FillLoginForm(user);
+            logPage.NavigateTo();
+            logPage.FillLoginForm(user);
 
-            regPage.AssertErrorMessageForEmptyEmailField("The Email field is required.");
+            logPage.AssertErrorMessageForEmptyEmailField("The Email field is required.");
         }
 
         [Test, Property("UI.Tests.Login", 1)]
         public void WithInvalidEmailLogin()
         {
-            LoginPage regPage = new LoginPage(this.driver);
+            LoginPage logPage = new LoginPage(this.driver);
             var user = AccessExcelData.GetTestDataLoging("LoginWithInvalidEmail");
 
-            regPage.NavigateTo();
-            regPage.FillLoginForm(user);
+            logPage.NavigateTo();
+            logPage.FillLoginForm(user);
 
-            regPage.AssertErrorMessageForEmptyEmailField("The Email field is not a valid e-mail address.");
+            logPage.AssertErrorMessageForEmptyEmailField("The Email field is not a valid e-mail address.");
         }
 
         [Test, Property("UI.Tests.Login", 1)]
         public void WithoutPasswordLogin()
         {
-            LoginPage regPage = new LoginPage(this.driver);
+            LoginPage logPage = new LoginPage(this.driver);
             var user = AccessExcelData.GetTestDataLoging("LoginWithoutPassword");
 
-            regPage.NavigateTo();
-            regPage.FillLoginForm(user);
+            logPage.NavigateTo();
+            logPage.FillLoginForm(user);
 
-            regPage.AssertErrorMessageForEmptyPasswordField("The Password field is required.");
+            logPage.AssertErrorMessageForEmptyPasswordField("The Password field is required.");
         }
 
         [Test, Property("UI.Tests.Login", 1)]
         public void WithIncorrectPasswordLogin()
         {
-            LoginPage regPage = new LoginPage(this.driver);
+            LoginPage logPage = new LoginPage(this.driver);
             var user = AccessExcelData.GetTestDataLoging("LoginWithIncorrectPassword");
 
-            regPage.NavigateTo();
-            regPage.FillLoginForm(user);
+            logPage.NavigateTo();
+            logPage.FillLoginForm(user);
 
-            regPage.AssertErrorMessageForIncorrectPassword("Invalid login attempt.");
+            logPage.AssertErrorMessageForIncorrectPassword("Invalid login attempt.");
         }
     }
 }

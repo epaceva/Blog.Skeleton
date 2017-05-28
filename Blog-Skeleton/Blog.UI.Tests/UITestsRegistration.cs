@@ -92,6 +92,3 @@ namespace Blog.UI.Tests
         }
     }
 }
-
-
-
