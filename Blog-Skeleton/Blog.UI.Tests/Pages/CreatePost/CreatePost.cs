@@ -11,7 +11,7 @@ namespace Blog.UI.Tests.Pages.CreatePost
     public partial class CreatePost : BasePage
     {
         private String url = "http://localhost:60634/Article/Create";
-
+    
         public CreatePost(IWebDriver driver) : base(driver)
         {
         }
