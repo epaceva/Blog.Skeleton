@@ -42,6 +42,7 @@ namespace Blog.UI.Tests
             HomePage homePage = new HomePage(this.driver);
             homePage.NavigateTo();
 
+
             LoginPage logPage = new LoginPage(this.driver);
             logPage.NavigateTo();
             var loginUser = AccessExcelData.GetTestDataLoging("LoginSuccessfully");
