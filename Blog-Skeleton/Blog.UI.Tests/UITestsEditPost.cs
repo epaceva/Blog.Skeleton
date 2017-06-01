@@ -116,12 +116,14 @@ namespace Blog.UI.Tests
 
             EditPost editPage = new EditPost(this.driver);
             var postUser = AccessExcelData.GetTestDataPosts("CancelButtonEditPost").ToString();
-            editPage.NavigateTo();
-            editPage.Title.SendKeys(postUser);
+            editPage.EditButton.Click();
+            editPage.TitleToEdit.Clear();
+            editPage.TitleToEdit.SendKeys(postUser);
+            editPage.ContentToEdit.Clear();
             editPage.ContentToEdit.SendKeys(postUser);
-            editPage.PostEditCancelButton.Click();
+            editPage.CancelButtonPost.Click();
 
-            editPage.AssertPostEditCancelButton("Test Post");
+            editPage.AssertPostEditCancelButton("Test Post Creation");
         }
 
         [Test, Property("UI.Tests.EditPost", 1)]
@@ -143,7 +145,7 @@ namespace Blog.UI.Tests
             editPage.NavigateTo();
             editPage.FillEditPostForm(postUser);
 
-            editPage.AssertPostEditCancelButton("Test Post");
+            editPage.AssertPostEditCancelButton("Test Post Creation");
         }
 
         [Test, Property("UI.Tests.EditPost", 1)]
@@ -160,8 +162,10 @@ namespace Blog.UI.Tests
             homePage.EditPostLink.Click();
 
             EditPost editPage = new EditPost(this.driver);
-            var postUser = AccessExcelData.GetTestDataPosts("EditPostSuccessfuly");
-            editPage.NavigateTo();
+            var postUser = AccessExcelData.GetTestDataPosts("EditPostSuccessfuly").ToString();
+            editPage.EditButton.Click();
+            editPage.TitleToEdit.Clear();
+            editPage.TitleToEdit.SendKeys(postUser);
 
             Actions builder = new Actions(this.driver);
             var action = builder.MoveToElement(editPage.ContentToEdit)
@@ -171,7 +175,7 @@ namespace Blog.UI.Tests
                                 .Release();
 
             action.Perform();
-            editPage.AssertEditPageIsDisplayed("Create Article");
+            editPage.AssertEditPageIsDisplayed("Edit Article");
             editPage.AssertComtentResizeField(300);
         }
     }

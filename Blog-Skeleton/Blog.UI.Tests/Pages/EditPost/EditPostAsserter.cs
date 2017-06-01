@@ -24,7 +24,7 @@ namespace Blog.UI.Tests.Pages.EditPost
         public static void AssertPostEditCancelButton(this EditPost page, string text)
         {
             Assert.IsTrue(page.PostEditCancelButton.Displayed);
-            Assert.AreNotEqual(text, page.PostEditCancelButton.Text);
+            Assert.AreEqual(text, page.PostEditCancelButton.Text);
         }
 
         public static void AssertEditPageIsDisplayed(this EditPost page, string text)

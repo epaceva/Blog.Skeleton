@@ -31,8 +31,6 @@ namespace Blog.UI.Tests.Pages.EditPost
 
         public void FillEditPostForm(BlogPage user)
         {
-
-            //Type(this.Title, user.Title);
             this.Title.Click();
             this.EditButton.Click();
             Type(this.TitleToEdit, user.Title);

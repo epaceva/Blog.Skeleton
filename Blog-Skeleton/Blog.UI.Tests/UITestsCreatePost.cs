@@ -38,7 +38,7 @@ namespace Blog.UI.Tests
         [Test, Property("UI.Tests.CreatePost", 1)]
         public void CreatePostSuccessfuly()
         {
-
+            
             HomePage homePage = new HomePage(this.driver);
             homePage.NavigateTo();
 

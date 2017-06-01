@@ -40,8 +40,8 @@ namespace Blog.UI.Tests.Pages.EditPost
         {
             get
             {
-                this.Wait.Until(ExpectedConditions.ElementExists(By.LinkText("Hello World")));
-                return this.Driver.FindElement(By.LinkText("Hello World"));
+                this.Wait.Until(ExpectedConditions.ElementExists(By.LinkText("Test Post Creation")));
+                return this.Driver.FindElement(By.LinkText("Test Post Creation"));
             }
         }
 
