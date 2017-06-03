@@ -34,7 +34,7 @@ namespace Blog.UI.Tests
             this.driver.Quit();
         }
 
-        [Test, Property("UI.Tests.EditPost", 1)]
+        [Test, Property("UI.Tests.2.EditPost", 1)]
         public void EditPostSuccessfuly()
         {
 
@@ -56,7 +56,7 @@ namespace Blog.UI.Tests
             editPage.AssertSuccessfulPostEdit("Test Post Edit");
         }
 
-        [Test, Property("UI.Tests.EditPost", 1)]
+        [Test, Property("UI.Tests.2.EditPost", 1)]
         public void WithoutTitlePostEdit()
         {
 
@@ -78,7 +78,7 @@ namespace Blog.UI.Tests
             editPage.AssertErrorMessageForEmptyFieldsPostEdit("The Title field is required.");
         }
 
-        [Test, Property("UI.Tests.EditPost", 1)]
+        [Test, Property("UI.Tests.2.EditPost", 1)]
         public void WithoutContentPostEdit()
         {
 
@@ -100,7 +100,7 @@ namespace Blog.UI.Tests
             editPage.AssertErrorMessageForEmptyFieldsPostEdit("The Content field is required.");
         }
 
-        [Test, Property("UI.Tests.EditPost", 1)]
+        [Test, Property("UI.Tests.2.EditPost", 1)]
         public void CancleEditButtonFuntionality()
         {
 
@@ -126,7 +126,7 @@ namespace Blog.UI.Tests
             editPage.AssertPostEditCancelButton("Test Post Creation");
         }
 
-        [Test, Property("UI.Tests.EditPost", 1)]
+        [Test, Property("UI.Tests.2.EditPost", 1)]
         public void DuplicatePostEdit()
         {
 
@@ -148,7 +148,7 @@ namespace Blog.UI.Tests
             editPage.AssertPostEditCancelButton("Test Post Creation");
         }
 
-        [Test, Property("UI.Tests.EditPost", 1)]
+        [Test, Property("UI.Tests.2.EditPost", 1)]
         public void EditPostContentResize()
         {
             HomePage homePage = new HomePage(this.driver);

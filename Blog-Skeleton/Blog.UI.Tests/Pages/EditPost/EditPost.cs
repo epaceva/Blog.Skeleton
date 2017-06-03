@@ -12,10 +12,11 @@ namespace Blog.UI.Tests.Pages.EditPost
     {
 
         private String url = "http://localhost:60634/Article/List";
+
         public EditPost(IWebDriver driver) : base(driver)
         {
         }
-
+        
         public string URL
         {
             get

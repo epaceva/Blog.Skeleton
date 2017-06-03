@@ -35,7 +35,7 @@ namespace Blog.UI.Tests
             this.driver.Quit();
         }
 
-        [Test, Property("UI.Tests.CreatePost", 1)]
+        [Test, Property("UI.Tests.1.CreatePost", 1)]
         public void CreatePostSuccessfuly()
         {
             
@@ -57,7 +57,7 @@ namespace Blog.UI.Tests
             createPage.AssertSuccessfulPostCreation("Test Post Creation");
         }
 
-        [Test, Property("UI.Tests.CreatePost", 1)]
+        [Test, Property("UI.Tests.1.CreatePost", 1)]
         public void WithoutTitlePostCreation()
         {
 
@@ -79,7 +79,7 @@ namespace Blog.UI.Tests
             createPage.AssertErrorMessageForEmptyFields("The Title field is required.");
         }
 
-        [Test, Property("UI.Tests.CreatePost", 1)]
+        [Test, Property("UI.Tests.1.CreatePost", 1)]
         public void WithoutContentPostCreation()
         {
 
@@ -101,7 +101,7 @@ namespace Blog.UI.Tests
             createPage.AssertErrorMessageForEmptyFields("The Content field is required.");
         }
 
-        [Test, Property("UI.Tests.CreatePost", 1)]
+        [Test, Property("UI.Tests.1.CreatePost", 1)]
         public void CancleButtonFuntionality()
         {
 
@@ -125,7 +125,7 @@ namespace Blog.UI.Tests
             createPage.AssertPostCreationCancelButton("Test Post");
         }
 
-        [Test, Property("UI.Tests.CreatePost", 1)]
+        [Test, Property("UI.Tests.1.CreatePost", 1)]
         public void DuplicatePostCreation()
         {
 
@@ -147,7 +147,7 @@ namespace Blog.UI.Tests
             createPage.AssertPostCreationCancelButton("Test Post Creation");
         }
 
-        [Test, Property("UI.Tests.CreatePost", 1)]
+        [Test, Property("UI.Tests.1.CreatePost", 1)]
         public void CreatePostContentResize()
         {
             HomePage homePage = new HomePage(this.driver);

@@ -17,5 +17,6 @@ namespace Blog.UI.Tests.Pages.HomePage
 
         public IWebElement CreatePostLink => Driver.FindElement(By.XPath("//a[contains(text(),'Create')]"));
         public IWebElement EditPostLink => Driver.FindElement(By.LinkText("Test Post Creation"));
+        public IWebElement DeletePostLink => Driver.FindElement(By.LinkText("Test Post Edit"));
     }
 }
