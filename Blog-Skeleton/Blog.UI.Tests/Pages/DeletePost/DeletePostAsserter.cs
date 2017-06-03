@@ -20,5 +20,11 @@ namespace Blog.UI.Tests.Pages.DeletePost
             Assert.IsTrue(page.PostDeleteCancelButton.Displayed);
             Assert.AreEqual(text, page.PostDeleteCancelButton.Text);
         }
+
+        public static void AssertEditForeignPostErrorMessageIsDisplayed(this DeletePost page, string text)
+        {
+            Assert.AreEqual(page.DeleteForeignPostText.Text, text);
+            Assert.IsTrue(page.DeleteForeignPostText.Displayed);
+        }
     }
 }

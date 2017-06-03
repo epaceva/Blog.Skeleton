@@ -52,5 +52,13 @@ namespace Blog.UI.Tests.Pages.EditPost
                 return this.Driver.FindElement(By.XPath("/html/body/div[2]/div/div/h2"));
             }
         }
+
+        public IWebElement EditForeignPostText
+        {
+            get
+            {
+                return this.Driver.FindElement(By.LinkText("You do not have permission to view this directory or page"));
+            }
+        }
     }
 }

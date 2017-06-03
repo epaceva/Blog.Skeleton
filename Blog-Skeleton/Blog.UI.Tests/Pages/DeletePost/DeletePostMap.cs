@@ -32,5 +32,13 @@ namespace Blog.UI.Tests.Pages.DeletePost
                 return this.Driver.FindElement(By.LinkText("Test Post Creation"));
             }
         }
+
+        public IWebElement DeleteForeignPostText
+        {
+            get
+            {
+                return this.Driver.FindElement(By.LinkText("You do not have permission to view this directory or page"));
+            }
+        }
     }
 }

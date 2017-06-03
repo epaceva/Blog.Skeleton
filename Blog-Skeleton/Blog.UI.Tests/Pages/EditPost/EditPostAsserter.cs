@@ -33,6 +33,12 @@ namespace Blog.UI.Tests.Pages.EditPost
             Assert.IsTrue(page.EditPostText.Displayed);
         }
 
+        public static void AssertEditForeignPostErrorMessageIsDisplayed(this EditPost page, string text)
+        {
+            Assert.AreEqual(page.EditForeignPostText.Text, text);
+            Assert.IsTrue(page.EditForeignPostText.Displayed);
+        }
+
         public static void AssertComtentResizeField(this EditPost page, int size)
         {
             Assert.IsTrue(size < page.ContentToEdit.Size.Height);

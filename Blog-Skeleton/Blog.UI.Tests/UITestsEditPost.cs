@@ -178,5 +178,27 @@ namespace Blog.UI.Tests
             editPage.AssertEditPageIsDisplayed("Edit Article");
             editPage.AssertComtentResizeField(300);
         }
+
+        [Test, Property("UI.Tests.2.EditPost", 1)]
+        public void EditForeignPost()
+        {
+
+            HomePage homePage = new HomePage(this.driver);
+            homePage.NavigateTo();
+
+            LoginPage logPage = new LoginPage(this.driver);
+            logPage.NavigateTo();
+            var loginUser = AccessExcelData.GetTestDataLoging("LoginForeinUserData");
+            logPage.FillLoginForm(loginUser);
+
+            homePage.EditPostLink.Click();
+
+            EditPost editPage = new EditPost(this.driver);
+            editPage.NavigateTo();
+            editPage.Title.Click();
+            editPage.EditButton.Click();
+
+            editPage.AssertEditForeignPostErrorMessageIsDisplayed("You do not have permission to view this directory or page");
+        }
     }
 }
