@@ -1,4 +1,6 @@
-﻿using BlogIntegrationTests;
+﻿using Blog.UI.Tests.Models;
+using Blog.UI.Tests.Pages.LoginPage;
+using BlogIntegrationTests;
 using BlogIntegrationTests.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -54,7 +56,7 @@ namespace Blog.Integration.Tests
         }
 
         [Test, Property("Integration.Navigation", 1)]
-        public void NavigateToHelloWorldPage()
+        public void NavigateToHelloWorldPost()
         {
             SitePages homePage = new SitePages(this.driver);
 
@@ -65,7 +67,7 @@ namespace Blog.Integration.Tests
         }
 
         [Test, Property("Integration.Navigation", 1)]
-        public void NavigateToProBlogPage()
+        public void NavigateToProBlogPost()
         {
             SitePages homePage = new SitePages(this.driver);
 
@@ -76,7 +78,7 @@ namespace Blog.Integration.Tests
         }
 
         [Test, Property("Integration.Navigation", 1)]
-        public void NavigateToBlogUpdatePage()
+        public void NavigateToBlogUpdatePost()
         {
             SitePages homePage = new SitePages(this.driver);
 
@@ -84,6 +86,22 @@ namespace Blog.Integration.Tests
             homePage.blogUpdateButton.Click();
 
             Assert.AreEqual("Blog Update!", homePage.blogUpdateHeading.Text);
+        }
+
+        [Test, Property("Integration.Navigation", 1)]
+        public void NavigateToLogoffPage()
+        {
+            SitePages homePage = new SitePages(this.driver);
+            homePage.NavigateToHomePage();
+
+            LoginPage logPage = new LoginPage(this.driver);
+            var user = AccessExcelData.GetTestDataLoging("LoginSuccessfully");
+
+            logPage.NavigateTo();
+            logPage.FillLoginForm(user);
+            homePage.logoffButton.Click();
+
+            Assert.AreEqual("http://localhost:60634/Article/List", homePage.homeUrl);
         }
     }
 }

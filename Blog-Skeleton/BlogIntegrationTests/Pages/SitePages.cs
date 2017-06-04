@@ -9,7 +9,7 @@ namespace BlogIntegrationTests.Pages
 {
     public partial class SitePages : BasePage
     {
-        private String homeUrl = "http://localhost:60634/Article/List";
+        public String homeUrl = "http://localhost:60634/Article/List";
         private String registrationUrl = "http://localhost:60634/Account/Register";
         private String loginUrl = "http://localhost:60634/Account/Login";
         private String helloWorldUrl = "http://localhost:60634/Article/Details/1";
@@ -35,17 +35,17 @@ namespace BlogIntegrationTests.Pages
             this.Driver.Navigate().GoToUrl(this.loginUrl);
         }
 
-        public void NavigateToHelloWorldPage()
+        public void NavigateToHelloWorldPost()
         {
             this.Driver.Navigate().GoToUrl(this.helloWorldUrl);
         }
 
-        public void NavigateToProBlogPage()
+        public void NavigateToProBlogPost()
         {
             this.Driver.Navigate().GoToUrl(this.proBlogUrl);
         }
 
-        public void NavigateToBlogUpdatePage()
+        public void NavigateToBlogUpdatePost()
         {
             this.Driver.Navigate().GoToUrl(this.blogUpdateUrl);
         }

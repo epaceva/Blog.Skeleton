@@ -67,7 +67,7 @@ namespace Blog.Integration.Tests
         {
             SitePages homePage = new SitePages(this.driver);
 
-            homePage.NavigateToHelloWorldPage();
+            homePage.NavigateToHelloWorldPost();
 
             Assert.AreEqual("Hello World", homePage.helloWorldHeading.Text);
         }
@@ -77,7 +77,7 @@ namespace Blog.Integration.Tests
         {
             SitePages homePage = new SitePages(this.driver);
 
-            homePage.NavigateToProBlogPage();
+            homePage.NavigateToProBlogPost();
 
             Assert.AreEqual("Pro Blog", homePage.proBlogHeading.Text);
         }
@@ -87,7 +87,7 @@ namespace Blog.Integration.Tests
         {
             SitePages homePage = new SitePages(this.driver);
 
-            homePage.NavigateToBlogUpdatePage();
+            homePage.NavigateToBlogUpdatePost();
 
             Assert.AreEqual("Blog Update!", homePage.blogUpdateHeading.Text);
         }

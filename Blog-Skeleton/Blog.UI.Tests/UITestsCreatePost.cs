@@ -28,7 +28,7 @@ namespace Blog.UI.Tests
             this.driver.Manage().Window.Maximize();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
         }
-
+        
         [TearDown]
         public void CleanUp()
         {

@@ -96,6 +96,7 @@
     <Compile Include="Models\AccessExcelData.cs" />
     <Compile Include="Models\BlogPage.cs" />
     <Compile Include="Models\LoginUser.cs" />
+    <Compile Include="Models\ManageUser.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\CreatePost\CreatePost.cs" />
@@ -112,6 +113,9 @@
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
     <Compile Include="Pages\LoginPage\LoginPageAsserter.cs" />
     <Compile Include="Pages\LoginPage\LoginPageMap.cs" />
+    <Compile Include="Pages\ManageAccount\ManageAccount.cs" />
+    <Compile Include="Pages\ManageAccount\ManageAccountAsserter.cs" />
+    <Compile Include="Pages\ManageAccount\ManageAccountMap.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPage.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageAsserter.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageMap.cs" />
@@ -126,6 +130,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <Compile Include="UITestsManageAccount.cs" />
     <Compile Include="UITestsRegistration.cs" />
   </ItemGroup>
   <ItemGroup>
