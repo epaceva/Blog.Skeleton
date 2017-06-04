@@ -79,26 +79,26 @@ namespace Blog.UI.Tests
             deletePost.AssertSuccessfulPostDelete("Test Post Edit");
         }
 
-        //[Test, Property("UI.Tests.3.DeletePost", 1)]
-        //public void DeleteForeignPost()
-        //{
+        [Test, Property("UI.Tests.3.DeletePost", 1)]
+        public void DeleteForeignPost()
+        {
 
-        //    HomePage homePage = new HomePage(this.driver);
-        //    homePage.NavigateTo();
+            HomePage homePage = new HomePage(this.driver);
+            homePage.NavigateTo();
 
-        //    LoginPage logPage = new LoginPage(this.driver);
-        //    logPage.NavigateTo();
-        //    var loginUser = AccessExcelData.GetTestDataLoging("LoginForeinUserData");
-        //    logPage.FillLoginForm(loginUser);
+            LoginPage logPage = new LoginPage(this.driver);
+            logPage.NavigateTo();
+            var loginUser = AccessExcelData.GetTestDataLoging("LoginForeinUserData");
+            logPage.FillLoginForm(loginUser);
 
-        //    homePage.DeletePostLink.Click();
+            homePage.DeletePostLink.Click();
 
-        //    DeletePost deletePost = new DeletePost(this.driver);
-        //    deletePost.NavigateTo();
-        //    deletePost.Title.Click();
-        //    deletePost.DeleteButton.Click();
+            DeletePost deletePost = new DeletePost(this.driver);
+            deletePost.NavigateTo();
+            deletePost.Title.Click();
+            deletePost.DeleteButton.Click();
 
-        //    deletePost.AssertEditForeignPostErrorMessageIsDisplayed("You do not have permission to view this directory or page");
-        //}
+            deletePost.AssertEditForeignPostErrorMessageIsDisplayed("You do not have permission to view this directory or page");
+        }
     }
 }
