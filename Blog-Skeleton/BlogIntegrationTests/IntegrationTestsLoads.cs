@@ -63,7 +63,7 @@ namespace Blog.Integration.Tests
         }
 
         [Test, Property("Integration.Load", 1)]
-        public void LoadHelloWorldPage()
+        public void LoadHelloWorldPost()
         {
             SitePages homePage = new SitePages(this.driver);
 
@@ -73,7 +73,7 @@ namespace Blog.Integration.Tests
         }
 
         [Test, Property("Integration.Load", 1)]
-        public void LoadProBlogPage()
+        public void LoadProBlogPost()
         {
             SitePages homePage = new SitePages(this.driver);
 
